@@ -1,0 +1,34 @@
+<tr>
+    <f:for each="{columns}" as="column">
+        <f:if condition="{0:column} == {0:'icon'}">
+            <th class="icone"></th>
+        </f:if>
+        <f:if condition="{0:column} == {0:'title'}">
+            <th><f:translate key="fileName"/></th>
+        </f:if>
+        <f:if condition="{0:column} == {0:'createdAt'}">
+            <th><f:translate key="createdAt"/></th>
+        </f:if>
+        <f:if condition="{0:column} == {0:'updatedAt'}">
+            <th><f:translate key="updatedAt"/></th>
+        </f:if>
+        <f:if condition="{0:column} == {0:'categories'}">
+            <th><f:translate key="categories"/></th>
+        </f:if>
+        <f:if condition="{0:column} == {0:'description'}">
+            <th><f:translate key="description"/></th>
+        </f:if>
+        <f:if condition="{0:column} == {0:'owner'}">
+            <th><f:translate key="owner"/></th>
+        </f:if>
+        <f:if condition="{0:column} == {0:'size'}">
+            <th><f:translate key="size"/></th>
+        </f:if>
+        <f:if condition="{0:column} == {0:'keywords'}">
+            <th><f:translate key="keywords"/></th>
+        </f:if>
+        <f:if condition="{0:column} == {0:'actions'}">
+            <th><f:translate key="actions"/></th>
+        </f:if>                                                   
+    </f:for>
+</tr>

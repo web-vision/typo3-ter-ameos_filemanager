@@ -1,0 +1,17 @@
+.ameos_file_manager{
+	width: 100%;
+
+}
+.ameos_file_manager table td, .ameos_file_manager table th {
+	border: thin solid #6495ed;
+	padding: 0 5px;
+	text-align: left;
+}
+
+.ameos_file_manager img.icone_file_manager { max-height:50px; }
+.ameos_file_manager h1{display: inline-block;}
+/*.ameos_file_manager input{display: block;}*/
+.ameos_file_manager input[type="text"]{width: 100%;}
+.ameos_file_manager select{display: block;width: 100%;}
+.ameos_file_manager textarea{display: block;width: 100%;}
+.ameos_file_manager .error{color: red;}

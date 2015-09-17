@@ -52,7 +52,7 @@ class FileList extends \TYPO3\CMS\FileList\FileList {
 			$data = array('sys_file_metadata' => array($metaData['uid'] => 'edit'));
 			$editOnClick = BackendUtility::editOnClick(GeneralUtility::implodeArrayForUrl('edit', $data), $GLOBALS['BACK_PATH'], $this->listUrl());
 			
-			if (version_compare(TYPO3_version, '6.2', '>')) {
+			if (version_compare(TYPO3_version, '7', '>=')) {
 				$cells['editmetadata'] = '<a href="#" class="btn btn-default" onclick="' . htmlspecialchars($editOnClick) . '" title="Edit Metadata of this file">' . IconUtility::getSpriteIcon('actions-page-open') . '</a>';
 			} else {
 				$cells['editmetadata'] = '<a href="#" onclick="' . $editOnClick . '" title="Edit Metadata of this file">' . IconUtility::getSpriteIcon('actions-document-open') . '</a>';
@@ -66,7 +66,7 @@ class FileList extends \TYPO3\CMS\FileList\FileList {
 					$folder = array('tx_ameosfilemanager_domain_model_folder' => array($row['uid'] => 'edit'));
 					$editOnClick = BackendUtility::editOnClick(GeneralUtility::implodeArrayForUrl('edit', $folder), $GLOBALS['BACK_PATH'], $this->listUrl());
 					
-					if (version_compare(TYPO3_version, '6.2', '>')) {
+					if (version_compare(TYPO3_version, '7', '>=')) {
 						$cells['editmetadata'] = '<a href="#" class="btn btn-default" onclick="' . htmlspecialchars($editOnClick) . '" title="Edit Metadata of this folder">' . IconUtility::getSpriteIcon('actions-page-open') . '</a>';
 					} else {
 						$cells['editmetadata'] = '<a href="#" onclick="' . $editOnClick . '" title="Edit Metadata of this folder">' . IconUtility::getSpriteIcon('actions-document-open') . '</a>';
@@ -87,7 +87,7 @@ class FileList extends \TYPO3\CMS\FileList\FileList {
 	 */
 	public function makeEdit($fileOrFolderObject) {
 		$this->indexFileOrFolder($fileOrFolderObject);
-		if (version_compare(TYPO3_version, '6.2', '>')) {
+		if (version_compare(TYPO3_version, '7', '>=')) {
 			return $this->makeEdit7($fileOrFolderObject);
 		} else {
 			return $this->makeEdit62($fileOrFolderObject);

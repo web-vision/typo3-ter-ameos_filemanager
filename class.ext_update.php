@@ -95,7 +95,7 @@ class ext_update
         $i=0;
         foreach ($storages as $storage) {
             $this->currentStorage = $storage;
-            $storagePath = $_SERVER['DOCUMENT_ROOT'] . '/' . $storage->getConfiguration()['basePath'];
+            $storagePath = PATH_site . '/' . $storage->getConfiguration()['basePath'];
             $this->setDatabaseForFolder(substr($storagePath, 0, -1), $storagePath);
         }
         return LocalizationUtility::translate('initializeSuccess', 'ameos_filemanager');
